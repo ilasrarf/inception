@@ -5,7 +5,7 @@ services:
     build:
       context: requirements/nginx
       dockerfile: Dockerfile
-    image: nginx
+    image: nginx:1337
     container_name: nginx
     env_file:
       - .env
@@ -21,7 +21,7 @@ services:
     build:
       context: requirements/mariadb
       dockerfile: Dockerfile
-    image: mariadb
+    image: mariadb:1337
     volumes:
       - db-data:/var/lib/mysql
     container_name: mariadb
@@ -33,7 +33,7 @@ services:
     build:
       context: requirements/wordpress
       dockerfile: Dockerfile
-    image: wordpress
+    image: wordpress:1337
     container_name: wordpress
     env_file:
       - .env
@@ -48,10 +48,10 @@ volumes:
     driver_opts:
       o: bind
       type: none
-      device: /home/ilasrarf/data/wp
+      device: /Users/ilasrarf/Desktop/inception/wp
 
   db-data:
     driver_opts:
       o: bind
       type: none
-      device: /home/ilasrarf/data/db
+      device: /Users/ilasrarf/Desktop/inception/db
