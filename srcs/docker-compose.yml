@@ -48,10 +48,10 @@ volumes:
     driver_opts:
       o: bind
       type: none
-      device: /Users/ilasrarf/Desktop/inception/wp
+      device: /home/ilasrarf/data/wp
 
   db-data:
     driver_opts:
       o: bind
       type: none
-      device: /Users/ilasrarf/Desktop/inception/db
+      device: /home/ilasrarf/data/db
